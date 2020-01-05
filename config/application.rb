@@ -8,6 +8,11 @@ Bundler.require(*Rails.groups)
 
 module ReactRailsApp
   class Application < Rails::Application
+    # TODO: Add rails API congiguration
+    config.api_only = true
+    config.debug_exception_response_format = :default
+    config.debug_exception_response_format = :api
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
